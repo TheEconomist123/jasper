@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.0.final using JasperReports Library version 6.5.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="branch_approval_exp" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8848c9ea-4201-4f9d-b659-c7b14fa22143">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="approvalDate" class="java.lang.String"/>
+	<parameter name="number" class="java.lang.String"/>
+	<parameter name="bankBill" class="java.lang.String"/>
+	<parameter name="shangBill" class="java.lang.String"/>
+	<parameter name="caisiBill" class="java.lang.String"/>
+	<parameter name="paperBill" class="java.lang.String"/>
+	<parameter name="elecBill" class="java.lang.String"/>
+	<parameter name="saleDuan" class="java.lang.String"/>
+	<parameter name="transDiscBankName" class="java.lang.String"/>
+	<parameter name="tradeAndCredit" class="java.lang.String"/>
+	<parameter name="telName" class="java.lang.String"/>
+	<parameter name="telNo" class="java.lang.String"/>
+	<parameter name="dealDate" class="java.lang.String"/>
+	<parameter name="dueDate" class="java.lang.String"/>
+	<parameter name="handle" class="java.lang.String"/>
+	<parameter name="signature4" class="java.lang.String"/>
+	<parameter name="signature1" class="java.lang.String"/>
+	<parameter name="signature2" class="java.lang.String"/>
+	<parameter name="signature3" class="java.lang.String"/>
+	<parameter name="desc" class="java.lang.String"/>
+	<parameter name="busReApproval" class="java.lang.String"/>
+	<parameter name="departHead" class="java.lang.String"/>
+	<parameter name="branchBankOpinion" class="java.lang.String"/>
+	<parameter name="billMoney" class="java.lang.String"/>
+	<parameter name="rate" class="java.lang.String"/>
+	<parameter name="billNos" class="java.lang.String"/>
+	<parameter name="buyDuan" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="91" splitType="Stretch">
+			<staticText>
+				<reportElement x="237" y="56" width="67" height="30" uuid="6931ad1d-a201-400a-acc2-8e6df9e15c79"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="华文宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[审批日期:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="298" y="57" width="100" height="30" uuid="90706c86-0615-4a97-ae50-0a5b64501fb3"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="华文宋体" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{approvalDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="400" y="56" width="43" height="30" uuid="8d39b13f-8c82-4b6e-8ccd-c615c1e05a67"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="华文宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[编号：]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="436" y="57" width="100" height="30" uuid="96503247-0292-431d-a26c-4691a3d2c2ce"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="华文宋体" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{number}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="700" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<frame>
+				<reportElement x="5" y="0" width="546" height="699" uuid="f3d44308-77bd-4e62-bf42-6c145bbe7b4d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<staticText>
+					<reportElement x="80" y="-73" width="400" height="30" uuid="4387ef32-73d5-42a2-afe8-c7173f980004"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="18" isBold="true"/>
+					</textElement>
+					<text><![CDATA[徽商银行票据交易（买入）审批表（总行）]]></text>
+				</staticText>
+				<line>
+					<reportElement x="50" y="0" width="1" height="699" uuid="adc37f75-341a-4bae-afbc-955cd0367995"/>
+				</line>
+				<staticText>
+					<reportElement x="6" y="184" width="33" height="290" uuid="2a8f19de-8e14-4a0c-824c-b6d6fcc96028"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="20"/>
+					</textElement>
+					<text><![CDATA[交易对手]]></text>
+				</staticText>
+				<line>
+					<reportElement x="51" y="40" width="495" height="1" uuid="0b47a3f1-d4c8-43c6-920b-dfd72dda58b9"/>
+				</line>
+				<line>
+					<reportElement x="51" y="85" width="495" height="1" uuid="85e3dc19-d882-40d7-bc6d-6bef7dcfcb09"/>
+				</line>
+				<line>
+					<reportElement x="51" y="132" width="495" height="1" uuid="8a2b2d96-d879-47b5-957c-a2c5059d6993"/>
+				</line>
+				<line>
+					<reportElement x="51" y="170" width="495" height="1" uuid="a57335a7-d9e1-4640-9e26-fab3e77afcb4"/>
+				</line>
+				<line>
+					<reportElement x="51" y="213" width="495" height="1" uuid="1af871f2-3d2b-47ba-84f7-0ef93489e1d6"/>
+				</line>
+				<line>
+					<reportElement x="51" y="254" width="495" height="1" uuid="81586376-b7f4-4d45-b7c5-580914e086c2"/>
+				</line>
+				<line>
+					<reportElement x="150" y="0" width="1" height="699" uuid="28bda4a8-6a4c-43f9-861f-9e8a58aa3669"/>
+				</line>
+				<line>
+					<reportElement x="305" y="40" width="1" height="93" uuid="f71d2504-644b-4cf0-b74b-1363a353eea5"/>
+				</line>
+				<line>
+					<reportElement x="403" y="40" width="1" height="93" uuid="a5ef7c7c-e3da-4fa8-a300-7da9d6c86896"/>
+				</line>
+				<staticText>
+					<reportElement x="308" y="47" width="94" height="34" uuid="12416278-20a3-4e2d-bc52-10f43ac58587">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="11"/>
+					</textElement>
+					<text><![CDATA[联系电话]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="53" y="45" width="94" height="34" uuid="bc1ddc30-95d9-430e-9397-469364db5d23">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="14"/>
+					</textElement>
+					<text><![CDATA[联系人]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="53" y="92" width="94" height="34" uuid="5d185f9c-4b25-4684-9828-6b4b25ae415b">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="14"/>
+					</textElement>
+					<text><![CDATA[票据种类]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="53" y="134" width="94" height="34" uuid="627333eb-55c9-485d-95a6-8c83931ea62c">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="14"/>
+					</textElement>
+					<text><![CDATA[交易方式]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="53" y="177" width="94" height="34" uuid="e5e440a2-1690-4ee7-9a65-cfd987622a50">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="14"/>
+					</textElement>
+					<text><![CDATA[成交日期]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="53" y="435" width="94" height="44" uuid="1234ab4c-fdf9-4b4d-b91f-ac87065168f7">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="14"/>
+					</textElement>
+					<text><![CDATA[交易标的]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="53" y="221" width="94" height="34" uuid="dc16bac9-e3ab-465b-a035-befcf4211da8">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="14"/>
+					</textElement>
+					<text><![CDATA[票面总金额]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="53" y="3" width="94" height="34" uuid="7f65fd7d-67cf-4163-b88a-ec05b613275a">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="14"/>
+					</textElement>
+					<text><![CDATA[转贴现行名称]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="308" y="94" width="90" height="30" uuid="db2dd9ba-b3dd-4a1d-b7ff-921ea5e75261">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="11"/>
+					</textElement>
+					<text><![CDATA[票据介质]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="311" y="259" width="90" height="30" uuid="117471f7-06a3-4dcc-9c33-b8299525b4fa">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="14"/>
+					</textElement>
+					<text><![CDATA[利率]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="154" y="102" width="20" height="20" uuid="fd8b1ee8-e57b-4820-aa14-41654cec3079">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="10"/>
+					</textElement>
+					<text><![CDATA[银票]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="203" y="102" width="20" height="20" uuid="9047237c-484b-4a86-baa6-096d43c24d02">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="10"/>
+					</textElement>
+					<text><![CDATA[商票]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="248" y="102" width="30" height="20" uuid="fc45578c-0b8c-4dac-95f8-29b6be02c9e1">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="10"/>
+					</textElement>
+					<text><![CDATA[财司票]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="225" y="104" width="16" height="16" uuid="32543ae9-6451-4a7e-80f0-4bd11dc07d7d">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.75"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{shangBill}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="176" y="104" width="16" height="16" uuid="d750435a-53ab-49b8-9a50-621d7948c029">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.75"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{bankBill}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="281" y="104" width="16" height="16" uuid="806c6d95-0415-414a-a2bf-f855888df5f1">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.75"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{caisiBill}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="154" y="3" width="390" height="36" uuid="24c98cbb-c73b-4e2d-ad7c-8f7d31c0db25">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{transDiscBankName}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="153" y="300" width="390" height="395" uuid="1feb59de-ab4d-4ab5-b023-a3d206d2eb92"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{tradeAndCredit}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="155" y="43" width="140" height="40" uuid="b9617100-1a65-4f1e-8a86-75cd731fcfb5">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{telName}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="409" y="43" width="130" height="40" uuid="0bc097ec-5bae-4448-ae58-a9c9660fb60a">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{telNo}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="421" y="99" width="20" height="20" uuid="87f96349-85e0-4b13-a3c1-27dea0996ea1">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="10"/>
+					</textElement>
+					<text><![CDATA[纸票]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="484" y="99" width="20" height="20" uuid="67a81fd5-cf72-4c58-b7d9-c4bf8a1cdf80">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="10"/>
+					</textElement>
+					<text><![CDATA[电票]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="444" y="101" width="16" height="16" uuid="5dcd44c4-d5f8-452e-a42d-5bcd9be32a39">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.75"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{paperBill}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="508" y="101" width="16" height="16" uuid="a8fa38e4-4d8c-49a5-a8ac-2fc9950beeca">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.75"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{elecBill}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="235" y="143" width="40" height="20" uuid="69eb9581-9a57-4781-ad23-5293e478f367">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="12"/>
+					</textElement>
+					<text><![CDATA[买断]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="386" y="141" width="40" height="20" uuid="f8772257-5ab0-4c6c-b61e-719c8de75ae9">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="12"/>
+					</textElement>
+					<text><![CDATA[卖断]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="423" y="141" width="20" height="20" uuid="870b43d9-47f7-49b4-bbf6-05db54e5e2ac">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.75"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{saleDuan}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="152" y="172" width="360" height="40" uuid="6b2ecee7-c58c-46cf-a994-b84aac891dde">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{dealDate}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="152" y="216" width="360" height="36" uuid="c2b232e9-d41e-4217-b46d-355219c87038">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{billMoney}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="413" y="254" width="130" height="40" uuid="a9b9a55a-57a4-4157-aa15-565dd3bb5e81">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{rate}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="51" y="294" width="495" height="1" uuid="aef6a342-ff81-4cb0-b76f-35e5e786249c"/>
+				</line>
+				<line>
+					<reportElement x="307" y="255" width="1" height="39" uuid="24d59623-64d1-4d88-8485-fb655fa03e59"/>
+				</line>
+				<line>
+					<reportElement x="404" y="255" width="1" height="39" uuid="c3c4dae5-3812-4054-a238-e8dbfd9d4b8f"/>
+				</line>
+				<staticText>
+					<reportElement x="53" y="259" width="94" height="34" uuid="47ce49a9-2b06-42dc-8d01-3ad19055973d">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="14"/>
+					</textElement>
+					<text><![CDATA[票据张数]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="161" y="260" width="130" height="30" uuid="05a81819-f3c2-470c-952b-00d1d65a4bb5">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{billNos}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="273" y="144" width="20" height="20" uuid="62fe8281-9723-4561-ae22-465088a1cc7d">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{buyDuan}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<summary>
+		<band height="560" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<frame>
+				<reportElement x="5" y="25" width="546" height="495" uuid="61c15f18-765d-4602-aa17-e971b5d60f83">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<line>
+					<reportElement x="0" y="40" width="546" height="1" uuid="917c9acf-1128-444d-8bb7-5170ab4b8401"/>
+				</line>
+				<staticText>
+					<reportElement x="181" y="1" width="196" height="36" uuid="ccc98dc3-f979-4289-8b0e-b3e4c1030967"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="14"/>
+					</textElement>
+					<text><![CDATA[审批信息]]></text>
+				</staticText>
+				<line>
+					<reportElement x="72" y="114" width="474" height="1" uuid="387fe2d3-8e70-4cba-8223-5c92e9ded3bb"/>
+				</line>
+				<line>
+					<reportElement x="72" y="206" width="474" height="1" uuid="7a13f263-665a-4d13-bc04-a28796331c27"/>
+				</line>
+				<line>
+					<reportElement x="0" y="295" width="546" height="1" uuid="e6ba2283-440e-480a-a848-b2dd8ac1f05e"/>
+				</line>
+				<line>
+					<reportElement x="0" y="378" width="545" height="1" uuid="89173c12-da18-4367-9706-45f08968fdae"/>
+				</line>
+				<line>
+					<reportElement x="166" y="41" width="1" height="454" uuid="12d5999d-4533-498e-bcac-b7e5bed4eba1"/>
+				</line>
+				<line>
+					<reportElement x="445" y="41" width="1" height="337" uuid="6aeccd4c-d08f-4011-a1c3-49ebf2f51512"/>
+				</line>
+				<line>
+					<reportElement x="375" y="41" width="1" height="337" uuid="f2d1970e-6ebf-469a-87ab-3b06aab7e93f"/>
+				</line>
+				<staticText>
+					<reportElement x="81" y="56" width="80" height="50" uuid="5b28aa8e-2b52-41c1-aef1-266f848ceede">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="14"/>
+					</textElement>
+					<text><![CDATA[业务初审岗]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="84" y="145" width="80" height="50" uuid="68cd19cf-1b46-458c-90c9-4db3c84f8547">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="14"/>
+					</textElement>
+					<text><![CDATA[业务复审岗]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="84" y="215" width="80" height="50" uuid="90070d6d-bef8-407e-a4f1-cadae8ce78dc">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="14"/>
+					</textElement>
+					<text><![CDATA[部门负责人]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="312" width="150" height="50" uuid="806f3a20-9c1a-42ed-beb5-bf61e58bda1d">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="14"/>
+					</textElement>
+					<text><![CDATA[分行分管行长意见]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="2" y="400" width="150" height="60" uuid="27c31a20-90d7-4f3a-83e1-dc96152c1ed4">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="14"/>
+					</textElement>
+					<text><![CDATA[备注]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="380" y="144" width="60" height="40" uuid="8971c57f-f39f-49fe-9529-dd886e361a3b">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="14"/>
+					</textElement>
+					<text><![CDATA[签名]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="380" y="229" width="60" height="40" uuid="f694c3fb-7033-416b-852a-99fb1aa4b5aa">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="14"/>
+					</textElement>
+					<text><![CDATA[签名]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="379" y="316" width="60" height="40" uuid="c1b644a1-2866-42e6-ac21-318bee1e281c">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="14"/>
+					</textElement>
+					<text><![CDATA[签名]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="380" y="63" width="60" height="40" uuid="9a395af3-1645-4c18-a458-829500c5c5fb">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="14"/>
+					</textElement>
+					<text><![CDATA[签名]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="172" y="45" width="200" height="66" uuid="fa929f98-54c3-4c7c-84c9-a7533ae18250">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="12"/>
+					</textElement>
+					<text><![CDATA[请审批]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="173" y="117" width="200" height="85" uuid="d4338a1a-d24e-46ae-9745-3b9001f337ea">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{busReApproval}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="173" y="210" width="200" height="80" uuid="d8d9b84a-ae3d-4e0f-93df-1528d4f6e8d5">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{departHead}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="170" y="300" width="200" height="75" uuid="b392e82f-0212-4797-859b-c31172b4610c">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{branchBankOpinion}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="444" y="299" width="100" height="75" uuid="c0ede284-7eaa-4709-b4a9-1e7642837c90">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{signature4}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="446" y="125" width="100" height="75" uuid="3f5749d9-592b-4bc7-b2f4-4cc4d35e83ff">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{signature2}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="445" y="44" width="100" height="65" uuid="7452742d-8cb6-4ded-9a16-6c3db1bbfbc3">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{signature1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="446" y="213" width="100" height="75" uuid="dd7f540a-84c2-4c77-af2c-c4417a68b534">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{signature3}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="174" y="382" width="368" height="110" uuid="1757bdd1-a8a6-4072-80ff-9e47c783e06c"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{desc}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="72" y="41" width="1" height="254" uuid="2b4d2a9c-3e63-46dd-b0c9-0cceb249a3fa"/>
+				</line>
+				<staticText>
+					<reportElement x="3" y="44" width="66" height="248" uuid="5163bd42-1309-4e78-ad6b-f39629f0b9f3">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="华文宋体" size="14"/>
+					</textElement>
+					<text><![CDATA[分行交易银行（或相关票据业务部门）]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement x="7" y="526" width="166" height="30" uuid="6bab3410-aa6a-4c85-9eb1-54ba7882617f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="华文宋体" size="11"/>
+				</textElement>
+				<text><![CDATA[注：实际结算金额以成交单为准]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
