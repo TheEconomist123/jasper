@@ -20,13 +20,6 @@ public class RedisDemo {
         JSONObject object1 = JSONObject.parseObject(ccc);
         System.out.println(object1.get("phoneNumbers").toString());
         CommonResp commonResp = new CommonResp();
-        /*tring value = "{\"library\":\"[{\\\"year\\\":1960,\\\"author\\\":\\\"Harper Lee\\\",\\\"genre\\\":\\\"Fiction\\\",\\\"title\\\":\\\"To Kill a Mockingbird\\\"},{\\\"year\\\":1949,\\\"author\\\":\\\"George Orwell\\\",\\\"genre\\\":\\\"Dystopian\\\",\\\"title\\\":\\\"1984\\\"},{\\\"year\\\":1813,\\\"author\\\":\\\"Jane Austen\\\",\\\"genre\\\":\\\"Romance\\\",\\\"title\\\":\\\"Pride and Prejudice\\\"},{\\\"year\\\":1925,\\\"author\\\":\\\"F. Scott Fitzgerald\\\",\\\"genre\\\":\\\"Tragedy\\\",\\\"title\\\":\\\"The Great Gatsby\\\"}]\",\"retCode\":\"000000\",\"retMsg\":\"调用成功\"}";
-        commonResp.setRestCode("00000");
-        commonResp.setRestMsg("cccc");
-        JSONObject object = new JSONObject();
-        Object list = object.put("list", value);
 
-        commonResp.setRetData(object);
-        System.out.println(commonResp.getRetData().toString());*/
     }
 }

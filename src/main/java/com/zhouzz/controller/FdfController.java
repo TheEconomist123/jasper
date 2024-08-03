@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.net.URLEncoder;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.util.ArrayList;
@@ -460,7 +461,7 @@ public class FdfController {
     public void branchChargeOffInform(HttpServletResponse response) throws Exception {
         response.reset();
         response.setContentType("application/vnd.ms-excel");
-        response.setHeader("Content-disposition", "attachment;filename=branchChargeOffInform" + System.currentTimeMillis() + ".pdf");
+        response.setHeader("Content-disposition", "attachment;filename=branchChargeOffInform" + System.currentTimeMillis() + "李四.pdf");
         ClassPathResource cpr = new ClassPathResource("templates/branch_charge_off_inform.jasper");
         System.out.println(cpr.getFilename());
         Map params = new HashMap();
@@ -493,6 +494,48 @@ public class FdfController {
 
 
 
+    @RequestMapping("/mdshg")
+    public void mdshg(HttpServletResponse response) throws Exception {
+        response.reset();
+        response.setContentType("application/vnd.ms-excel");
+
+       /*
+        response.setHeader("Content-disposition", "attachment;filename=mdshg" + System.currentTimeMillis() + "小明.pdf");*/
+
+        String filename = "mdshg" + System.currentTimeMillis() + "不管多波折，多磨难.pdf";
+        String encodedFilename = URLEncoder.encode(filename, "UTF-8").replaceAll("\\+", "%20");
+        response.setHeader("Content-disposition", "attachment; filename*=UTF-8''" + encodedFilename);
+
+
+        ClassPathResource cpr = new ClassPathResource("templates/sale_slip/mdshg.jasper");
+        System.out.println(cpr.getFilename());
+        Map params = new HashMap();
+        params.put("headChargeOffInform", "√");
+        params.put("transDiscBankName", "中国农业银行股份有限公司总行营业部门(非转汇行)");
+        params.put("dealDate", "2023-04-05");
+        params.put("buyBackDate", "2023-04-05");
+        params.put("bankBill", "√");
+        params.put("paperBill", "√");
+        params.put("elecBill", "√");
+        params.put("caisiBill", "√");
+        params.put("shangBill", "√");
+        params.put("dvp", "√");
+        params.put("fop", "√");
+        params.put("buyDuan", "√");
+        params.put("saleDuan", "√");
+        params.put("zaiDiscZhiYaHuiGou", "√");
+        params.put("billMoney", "80000000");
+        params.put("interest", "200000");
+        params.put("actPayOrReceAmount", "1000000");
+        params.put("handle", "刘雯雯");
+        params.put("review", "李克勤");
+        params.put("departHead", "溜达脑袋");
+        params.put("billNos", "20");
+
+        JasperPrint jasperPrint = JasperFillManager.fillReport(cpr.getInputStream(), params, new JREmptyDataSource());
+        JasperExportManager.exportReportToPdfStream(jasperPrint, response.getOutputStream());
+        System.out.println("--------------------------------结束");
+    }
 
 
 
